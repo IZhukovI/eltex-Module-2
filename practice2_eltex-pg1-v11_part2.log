@@ -1,0 +1,49 @@
+=== ВЫПОЛНЕНИЕ ЧАСТИ 2 ===
+Время начала: Thu Oct 23 03:53:26 PM +07 2025
+Пользователь: eltex-pg1-v11
+
+=== ПУНКТ 1: JOURNALCTL ЗА ПЕРВЫЕ 20 СЕКУНД ЗАГРУЗКИ ===
+Определяем время начала загрузки...
+Время начала загрузки: Oct 23 15:53:01
+Failed to parse timestamp: Oct 23 15:53:01 00:00:20
+
+=== ПУНКТ 2: АНАЛИЗ AUTH.LOG ===
+Найден auth.log: 
+Файл auth.log не найден
+
+=== ПУНКТ 3: ПОДСЧЕТ ПОВТОРЕНИЙ ИСТОЧНИКОВ ===
+Файл auth.log не найден
+
+=== ПУНКТ 4: ПОЛЬЗОВАТЕЛИ С SHELL /USR/SBIN/NOLOGIN ===
+65534,  nobody, 
+998,  systemd-network, 
+997,  systemd-timesync, 
+101,  sshd, 
+100,  messagebus, 
+42,  _apt, 
+39,  irc, 
+38,  list, 
+34,  backup, 
+33,  www-data, 
+13,  proxy, 
+10,  uucp, 
+9,  news, 
+8,  mail, 
+7,  lp, 
+6,  man, 
+5,  games, 
+3,  sys, 
+2,  bin, 
+1,  daemon, 
+
+=== ПУНКТ 5: ПОИСК 'KERNEL' В DMESG ===
+
+=== ПУНКТ 6: ПОДСЧЕТ СТРОК В /VAR/LOG/KERN.LOG ===
+Файл /var/log/kern.log не найден
+
+=== ПУНКТ 7: ФОРМАТИРОВАНИЕ APT/HISTORY.LOG ===
+
+=== ВЫПОЛНЕНИЕ ЗАВЕРШЕНО ===
+Время завершения: Thu Oct 23 03:54:38 PM +07 2025
+Лог-файл: practice2_eltex-pg1-v11_part2.log
+Размер: 1.4K

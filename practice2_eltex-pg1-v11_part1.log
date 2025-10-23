@@ -1,0 +1,300 @@
+=== ВЫПОЛНЕНИЕ НА СЕРВЕРЕ 1 ===
+Время начала: Thu Oct 23 03:14:11 PM +07 2025
+Пользователь: eltex-pg1-v11
+IP сервера 1: 217.71.138.1:44556
+
+=== ПУНКТ 1: СОЗДАНИЕ SSH КЛЮЧА ===
+Generating public/private rsa key pair.
+/home/eltex-pg1-v11/.ssh/id_rsa already exists.
+Overwrite (y/n)? Your identification has been saved in /home/eltex-pg1-v11/.ssh/id_rsa
+Your public key has been saved in /home/eltex-pg1-v11/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:UK5TkLlACB33avviDu322Q13HUs66sygRWAUL/5aATc eltex-pg1-v11@eltex-2025-autumn
+The key's randomart image is:
++---[RSA 4096]----+
+|.o.+o ++.        |
+|  o..oo=         |
+|     .B.E        |
+|     +.O .       |
+|    o + S     o  |
+|   o . + .   + o |
+|  . o   * . + o  |
+|   oo. B B o .   |
+|   ++o* ..*      |
++----[SHA256]-----+
+Ключ создан:
+-rw------- 1 eltex-pg1-v11 eltex-pg1-v11 3401 Oct 23 15:14 /home/eltex-pg1-v11/.ssh/id_rsa
+-rw-r--r-- 1 eltex-pg1-v11 eltex-pg1-v11  757 Oct 23 15:14 /home/eltex-pg1-v11/.ssh/id_rsa.pub
+
+=== ПУНКТ 2: КОПИРОВАНИЕ КЛЮЧА НА СЕРВЕР 2 ===
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/eltex-pg1-v11/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'root@172.16.9.185'"
+and check to make sure that only the key(s) you wanted were added.
+
+Ключ скопирован
+
+=== ПУНКТ 3: ПРОВЕРКА КЛЮЧЕЙ НА СЕРВЕРЕ 1 ===
+Публичный ключ:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDNXMF3UOo2s8JIpuW9NCEhWBC+P7+RcbNP/uqfgI7Nq807jGlg3C+SP3ukTqG4mpM5r0ykJIRsYOsF9tMU+pj9XIGBP6T3qgOyRgsa0GX3T65h3VDamNhhmMPGPbAgN2ieAsxj7w1YgrJm2OTZ54LHEAQTd6TzNIs+BqNL8K6bIAEH/U3hsgyYXsL+cWrMDDbMLRH7lDa0b2GJpFAnm53v9WmZBNJbIxTiMa9UskmZF7bfeFvh/G2iURD64sELEcLFWElIvpkOd6AwidGxUaL26B0AwsLV06U8CsZfN14TCPcn+d02y5I2++PlwzEOpGs4GxTwaMk9sqDomZdWZr6MMGy5kX5oDTjZTigFB+rlrqE1f0cUrJAm9QwZbtegAZE9B7edpAWQfCcYXrqzndxO9ZADXkBqkKeKIDvqvLv/eXW63m08q05XGNverUHYgZza5w16xkUIfW6/OKXToaMsBp2qkVDFbbk2zcebyM5Cn4+O+bvqa2WuAyLGv7ODlc7My/6gRlCYuvjpHiJrsM1ZrKPGUfsPv53M+pnB6jk4DZtTroRfswaB4+led6tre1mdqIwQ0oasBbTxbVWlMl1NRCg7aH7/4lOrKrgawP2Xq/noUp75ZNlkiO+/8RLF+SqLv1S+TBngraZ4th87Qjl1L3UE4stRc5W0ZIDZB6dhwQ== eltex-pg1-v11@eltex-2025-autumn
+
+Права доступа:
+-rw-r--r-- 1 eltex-pg1-v11 eltex-pg1-v11 757 Oct 23 15:14 /home/eltex-pg1-v11/.ssh/id_rsa.pub
+
+=== ВЫПОЛНЕНИЕ НА СЕРВЕРЕ 2 ===
+=== ПУНКТ 3: ПРОВЕРКА НА СЕРВЕРЕ 2 ===
+authorized_keys:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxmhQQvYu7WXtc6vsHpIo5rJUkSZHUtLNrqHQKZw+SSYpoS2nqL0pESJcdb99eK6pxU5DnklzyARxNA2Y9a+TFJYvxcTosNHzmjvtho5hvAT74UUGiGHW/ST/jiHMcZguqWt7Qundpld+wXzAyBKoXWpvjxuR0Gp49hwLnVU8hlGoewFPWVAwMVny/Dc/JxCV+ZbvkY+pBy6OsdkseYcUsHE3MtyxocBpUg8c1ff0qRNFog6eJ5Pf9QGZbE5JGSliYbVKCWhbWQLoShqDag7YMma4fGBXZJRfG4ZjwBdDVEWrSoEU7xVH/bq38LOXaMgui2EryKBFlne5W6VnaVkxCZzoDwQ1Wd63h/SPdxWoV8Yy5smvSV/m32slo055or5/HalrUAaoGtqkJFms+2jLuZgSrMivqYKeggfuwy/HYOZBYKZo6fAIP6oYA0shQreylX2qKA3x+BqjWnuLyaY3bg0ucSTxg14u2kk2PBqh1W7564i7L76YTDHqAt5JMi1kFWf/ls+egk3FWE9MEbBL5A91VnOje756K3ZbVq4cGM1KDqiDF4st72sckGakBVF3vFW2ytkyjNokPeOOrh30XyADjnxvD44rfFrZMj44eRj3iwDFD1UPHrU6szx0k6vzdhihDV3sMoad77s4Nad+CVPiHkHBIsIjBlVY2U1o5nQ== eltex-pg1-v11@eltex-2025-autumn
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBUB6zmSw/+uKJDfrTLdg/RmReo+SQe4w1Z6cm1mgVlVgB2lUc0lSDKL2Xbpo9EMOLUxUt03nVfv+8Ttf96uggEmcfpsPTC+h6NXtatSsw9l8gB162MELkpYBS3JFjysLRwGzXrBkUG53iTEu+LwLIMG9K2BpJWum/YXQA0p+IUMSwTlmceDuaVJCwNBAi2SJgGEaDixXU329gSR0DKws8WeRd1a05AYIcMr09FQ1biCMeT+ZoUwSJhH8KOEhrYM4Na7dIRMM069+kfLVH0TKHJ4p5wDu6BF6Dx4tzjs3rSyfpMo/hZMLgwOp2GSWOf626hsZF7fjfi8k9imBkUthw5bA8mexQQ8sce8+8OshRxJBSsSRg99HnJYWJTHej7WQ+djUroIpNAy5gakUrvQ6rwwlJ0J76pTB+x7WiTpcWNQaDQMI9hIcHlKC7r0ERjWULGIIk+KaVpFkbSXzyho+X6FLeZp98HrpOTFpcf13ofl4glmgkIVmJZC5oisxoJoto1h4eTyMJ8dMEQOYeZdXSJ9GxkftKzVcj3RsBygsjF5gTnV72x+CFa0siyw5kAUe0aoCKlOj6VuSiLnNLKFitWmamVScSoi0tkYD3gEOgNsLEgT27jfGWz5/C2z+8mfL5BtKnP2K4Aiq2Nnu/8Uv0LmhGkdSDfjIXcd5cLea5dQ== eltex-pg1-v11@eltex-2025-autumn
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDNXMF3UOo2s8JIpuW9NCEhWBC+P7+RcbNP/uqfgI7Nq807jGlg3C+SP3ukTqG4mpM5r0ykJIRsYOsF9tMU+pj9XIGBP6T3qgOyRgsa0GX3T65h3VDamNhhmMPGPbAgN2ieAsxj7w1YgrJm2OTZ54LHEAQTd6TzNIs+BqNL8K6bIAEH/U3hsgyYXsL+cWrMDDbMLRH7lDa0b2GJpFAnm53v9WmZBNJbIxTiMa9UskmZF7bfeFvh/G2iURD64sELEcLFWElIvpkOd6AwidGxUaL26B0AwsLV06U8CsZfN14TCPcn+d02y5I2++PlwzEOpGs4GxTwaMk9sqDomZdWZr6MMGy5kX5oDTjZTigFB+rlrqE1f0cUrJAm9QwZbtegAZE9B7edpAWQfCcYXrqzndxO9ZADXkBqkKeKIDvqvLv/eXW63m08q05XGNverUHYgZza5w16xkUIfW6/OKXToaMsBp2qkVDFbbk2zcebyM5Cn4+O+bvqa2WuAyLGv7ODlc7My/6gRlCYuvjpHiJrsM1ZrKPGUfsPv53M+pnB6jk4DZtTroRfswaB4+led6tre1mdqIwQ0oasBbTxbVWlMl1NRCg7aH7/4lOrKrgawP2Xq/noUp75ZNlkiO+/8RLF+SqLv1S+TBngraZ4th87Qjl1L3UE4stRc5W0ZIDZB6dhwQ== eltex-pg1-v11@eltex-2025-autumn
+Права доступа:
+-rw------- 1 root root 2271 Oct 23 08:14 /root/.ssh/authorized_keys
+
+=== ПУНКТ 4: СОЗДАНИЕ USER1 ===
+uid=1001(user1) gid=1001(user1) groups=1001(user1)
+
+
+=== ПРОДОЛЖЕНИЕ ВЫПОЛНЕНИЯ ЗАДАНИЙ ===
+Время: Thu Oct 23 03:22:09 PM +07 2025
+
+=== ПУНКТ 5: СОЗДАНИЕ USER2 И USER3 ===
+info: Adding user `user2' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `user2' (1002) ...
+info: Adding new user `user2' (1002) with group `user2 (1002)' ...
+info: Creating home directory `/home/user2' ...
+info: Copying files from `/etc/skel' ...
+info: Adding new user `user2' to supplemental / extra groups `users' ...
+info: Adding user `user2' to group `users' ...
+info: Adding user `user3' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `user3' (1003) ...
+info: Adding new user `user3' (1003) with group `user3 (1003)' ...
+info: Creating home directory `/home/user3' ...
+info: Copying files from `/etc/skel' ...
+info: Adding new user `user3' to supplemental / extra groups `users' ...
+info: Adding user `user3' to group `users' ...
+user2:
+uid=1002(user2) gid=1002(user2) groups=1002(user2),100(users)
+user3:
+uid=1003(user3) gid=1003(user3) groups=1003(user3),100(users)
+
+=== ПУНКТ 6: СМЕНА SHELL ДЛЯ USER3 ===
+Shell user3 изменен на:
+/usr/sbin/nologin
+Попытка входа без параметров:
+This account is currently not available.
+Код возврата: $?
+Попытка входа с shell:
+Вход выполнен как: \eltex-pg1-v11
+Код возврата: $?
+
+=== ПУНКТ 7: СОЗДАНИЕ ГРУППЫ ===
+Группы пользователей:
+user1 : user1 sharegroup
+user2 : user2 users sharegroup
+user3 : user3 users sharegroup
+
+=== ПУНКТ 9: СОЗДАНИЕ КАТАЛОGA /OPT/SHARE ===
+Каталог создан:
+total 8
+drwxrws--- 2 root sharegroup 4096 Oct 23 08:26 .
+drwxr-xr-x 3 root root       4096 Oct 23 08:26 ..
+
+=== ПУНКТ 10: НАСТРОЙКА UMASK ДЛЯ USER1 ===
+Umask установлен. Проверка:
+0002
+
+=== ПУНКТ 11: СОЗДАНИЕ И УДАЛЕНИЕ ФАЙЛОВ ===
+user1 создал файл
+user2 создал файл
+This account is currently not available.
+Файлы созданы:
+total 8
+drwxrws--- 2 root  sharegroup 4096 Oct 23 08:28 .
+drwxr-xr-x 3 root  root       4096 Oct 23 08:26 ..
+-rw-rw-r-- 1 user1 sharegroup    0 Oct 23 08:28 user1_file.txt
+-rw-rw-r-- 1 user2 sharegroup    0 Oct 23 08:28 user2_file.txt
+user1 удалил файлы других пользователей
+Оставшиеся файлы:
+total 8
+drwxrws--- 2 root  sharegroup 4096 Oct 23 08:28 .
+drwxr-xr-x 3 root  root       4096 Oct 23 08:26 ..
+-rw-rw-r-- 1 user1 sharegroup    0 Oct 23 08:28 user1_file.txt
+
+=== ПУНКТ 12: УСТАНОВКА STICKY BIT ===
+Sticky bit установлен:
+total 8
+drwxrws--T 2 root  sharegroup 4096 Oct 23 08:28 .
+drwxr-xr-x 3 root  root       4096 Oct 23 08:26 ..
+-rw-rw-r-- 1 user1 sharegroup    0 Oct 23 08:28 user1_file.txt
+user2 создал новый файл
+This account is currently not available.
+Файлы созданы:
+total 8
+drwxrws--T 2 root  sharegroup 4096 Oct 23 08:28 .
+drwxr-xr-x 3 root  root       4096 Oct 23 08:26 ..
+-rw-rw-r-- 1 user1 sharegroup    0 Oct 23 08:28 user1_file.txt
+-rw-rw-r-- 1 user2 sharegroup    0 Oct 23 08:28 user2_new.txt
+rm: cannot remove '/opt/share/user2_new.txt': Operation not permitted
+Удаление user2_new.txt: ошибка
+Удаление user3_new.txt: успех
+Оставшиеся файлы:
+total 8
+drwxrws--T 2 root  sharegroup 4096 Oct 23 08:28 .
+drwxr-xr-x 3 root  root       4096 Oct 23 08:26 ..
+-rw-rw-r-- 1 user1 sharegroup    0 Oct 23 08:28 user1_file.txt
+-rw-rw-r-- 1 user2 sharegroup    0 Oct 23 08:28 user2_new.txt
+
+=== ПУНКТ 13: НАСТРОЙКА SUDO И SUID ===
+Sudo права для user1 настроены
+SUID скрипт создан:
+-rwxr-xr-x 1 root root 15 Oct 23 08:31 /usr/local/bin/dmesg_suid.sh
+=== Проверка прав ===
+    (ALL) NOPASSWD: /usr/bin/dmesg
+dmesg: read kernel buffer failed: Operation not permitted
+
+=== ПУНКТ 14: ВРЕМЯ ДЕЙСТВИЯ ПАРОЛЯ 10 ДНЕЙ ===
+Настройки паролей установлены:
+Last password change					: Oct 23, 2025
+Password expires					: Nov 02, 2025
+Password inactive					: never
+
+=== ПУНКТ 15: РЕДАКТИРОВАНИЕ /ETC/MOTD ===
+MOTD обновлен:
+Иван Иванов
+
+=== ПУНКТ 16: КОПИРОВАНИЕ /ETC ЧЕРЕЗ RSYNC ===
+xml/xml-core.xml
+xml/xml-core.xml.old
+
+sent 2,451,010 bytes  received 19,352 bytes  4,940,724.00 bytes/sec
+total size is 2,366,617  speedup is 0.96
+Копирование завершено
+Количество файлов: $(find /root/etc_backup -type f | wc -l)
+
+=== ПУНКТ 17: АРХИВИРОВАНИЕ РАЗНЫМИ АЛГОРИТМАМИ ===
+Hit:1 http://ru.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:3 http://ru.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://ru.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:5 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,535 kB]
+Get:6 http://ru.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [292 kB]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,260 kB]
+Get:8 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+Get:9 http://ru.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [15.3 kB]
+Get:10 http://ru.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:11 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,496 kB]
+Get:12 http://ru.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [378 kB]
+Get:13 http://ru.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:14 http://ru.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7,148 B]
+Get:15 http://ru.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [212 B]
+Get:16 http://ru.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [11.0 kB]
+Get:17 http://ru.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [208 kB]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+Get:20 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [8,968 B]
+Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2,069 kB]
+Get:22 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [468 kB]
+Get:23 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+Get:24 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [904 kB]
+Get:25 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.3 kB]
+Get:26 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Fetched 9,280 kB in 2s (4,002 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  7zip
+Suggested packages:
+  7zip-standalone 7zip-rar
+The following NEW packages will be installed:
+  7zip p7zip-full
+0 upgraded, 2 newly installed, 0 to remove and 83 not upgraded.
+Need to get 1,849 kB of archives.
+After this operation, 6,318 kB of additional disk space will be used.
+Get:1 http://ru.archive.ubuntu.com/ubuntu noble/universe amd64 7zip amd64 23.01+dfsg-11 [1,846 kB]
+Get:2 http://ru.archive.ubuntu.com/ubuntu noble/universe amd64 p7zip-full all 16.02+transitional.1 [2,500 B]
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 1,849 kB in 6s (295 kB/s)
+Selecting previously unselected package 7zip.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 124898 files and directories currently installed.)
+Preparing to unpack .../7zip_23.01+dfsg-11_amd64.deb ...
+Unpacking 7zip (23.01+dfsg-11) ...
+Selecting previously unselected package p7zip-full.
+Preparing to unpack .../p7zip-full_16.02+transitional.1_all.deb ...
+Unpacking p7zip-full (16.02+transitional.1) ...
+Setting up 7zip (23.01+dfsg-11) ...
+Setting up p7zip-full (16.02+transitional.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart getty@tty1.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+Pending kernel upgrade
+----------------------
+
+Newer kernel available
+
+The currently running kernel version is 6.8.0-55-generic which is not the 
+expected kernel version 6.8.0-86-generic.
+
+Restarting the system to load the new kernel will not be handled automatically, 
+so you should consider rebooting.
+
+=== ПУНКТ 13: НАСТРОЙКА SUDO И SUID (ИСПРАВЛЕННЫЙ) ===
+SUID скрипт создан:
+-rwxr-xr-x 1 root root 27 Oct 23 08:40 /usr/local/bin/dmesg_suid.sh
+=== Проверка прав ===
+    (ALL) NOPASSWD: /usr/bin/dmesg
+dmesg: read kernel buffer failed: Operation not permitted
+
+SUID права исправлены:
+-rwsr-xr-x 1 root root 27 Oct 23 08:40 /usr/local/bin/dmesg_suid.sh
+=== ПУНКТ 18: СИНХРОНИЗАЦИЯ И ОБНОВЛЕНИЕ АРХИВА ===
+motd
+Синхронизация завершена
+
+=== ПУНКТ 19: СРАВНЕНИЕ СОДЕРЖИМОГО ===
+Различия (первые 5):
+0a1,859
+> etc_backup/adduser.conf
+> etc_backup/alternatives/README
+> etc_backup/apparmor.d/1password
+> etc_backup/apparmor.d/abi/3.0
+
+=== ПУНКТ 20: РАСПАКОВКА И СРАВНЕНИЕ ===
+=== Сравнение файлов motd ===
+Код возврата diff: $?
+
+=== ВСЕ ЗАДАНИЯ ВЫПОЛНЕНЫ ===
+Лог-файл: practice2_eltex-pg1-v11_part1.log
+Размер: 
+Количество строк: 299

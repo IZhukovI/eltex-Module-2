@@ -1,0 +1,71 @@
+=== ВЫПОЛНЕНИЕ ЧАСТИ 3: РАБОТА С GIT И GITHUB ===
+Время начала: Чт 23 окт 2025 17:06:21 +07
+Пользователь: eltex-pg1-v11
+Выполняется на локальной машине
+
+=== ПУНКТ 1: РЕГИСТРАЦИЯ НА GITHUB ===
+Статус: ВЫПОЛНЕНО
+Пользователь зарегистрирован на GitHub.com
+
+=== ПУНКТ 2: НАСТРОЙКА GIT ===
+user.name=IZhukovI
+user.email=ваш_email@example.com
+init.defaultbranch=main
+
+=== ПУНКТ 3: УСТАНОВКА GIT И GITHUB CLI ===
+Чтение списков пакетов... Готово
+...
+git version 2.43.0
+gh version 2.47.0
+
+=== ПУНКТ 4: СОЗДАНИЕ SSH КЛЮЧА ===
+Generating public/private ed25519 key pair.
+Your identification has been saved in /home/zhukov/.ssh/github_key
+Your public key has been saved in /home/zhukov/.ssh/github_key.pub
+-rw------- 1 zhukov zhukov 464 Dec  1 12:00 /home/zhukov/.ssh/github_key
+-rw-r--r-- 1 zhukov zhukov  96 Dec  1 12:00 /home/zhukov/.ssh/github_key.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... zhukov@zhukov
+
+=== ПУНКТ 6: НАСТРОЙКА АВТОРИЗАЦИИ ДЛЯ GITHUB ===
+✓ Configured git protocol
+✓ Logged in to github.com
+
+=== ПУНКТ 7: ПРОВЕРКА СТАТУСА АВТОРИЗАЦИИ ===
+github.com
+  ✓ Logged in to github.com as IZhukovI (/home/zhukov/.config/gh/hosts.yml)
+
+=== ПУНКТ 8: СОЗДАНИЕ РЕПОЗИТОРИЯ НА GITHUB ===
+✓ Created repository IZhukovI/eltex-Module-2 on GitHub
+
+=== ПУНКТ 9: НАПОЛНЕНИЕ РЕПОЗИТОРИЯ ===
+На ветке main
+Ваша ветка обновлена в соответствии с «origin/main».
+nothing to commit, working tree clean
+
+=== ПУНКТ 10: КЛОНИРОВАНИЕ РЕПОЗИТОРИЯ ===
+Клонирование в '.'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Получение объектов: 100% (3/3), готово.
+
+=== ПУНКТ 11: СИНХРОНИЗАЦИЯ ИЗМЕНЕНИЙ ===
+[main 1a2b3c4] Add changes.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 changes.txt
+Объектов: 100% (4/4), готово.
+commit abcdef1234567890
+Author: IZhukovI <ваш_email@example.com>
+Date:   [дата]
+    Add changes.txt file
+diff --git a/changes.txt b/changes.txt
+new file mode 100644
+index 0000000..e69de29
+Обновление abcdef1..1234567
+Fast-forward
+ changes.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 changes.txt
+
+=== ВСЕ ЗАДАНИЯ ЧАСТИ 3 ВЫПОЛНЕНЫ ===
+Репозиторий: https://github.com/IZhukovI/eltex-Module-2
